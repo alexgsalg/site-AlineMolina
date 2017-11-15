@@ -8,9 +8,11 @@ body {
 .navbar {
   position: fixed;
   width: 100%;
+  z-index: 100;
 }
 
 .nav-container {
+  max-width: 1300px;
   margin: 0 auto;
   padding: 15px 2%;
 }
@@ -27,6 +29,8 @@ body {
 }
 
 .nav-menu {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: lighter;
   float: right;
   list-style: none;
   margin-top: 10px;
@@ -34,6 +38,7 @@ body {
 
 .nav-link {
   display: inline-block;
+  font-size: 0.9em;
   padding: 12px 12px;
   text-decoration: none;
   color: #ffffff;
@@ -48,28 +53,63 @@ body {
 
 .button {
   font-family: "Open Sans Bold", "Arial", sans-serif;
+  display: inline-block;
   width: 220px;
   margin: 30px 10px 5px 10px;
-  border: 1px solid #F8D334;
+  border: 2px solid #F8D334;
   background: #F8D334;
   color: #252D64;
   padding: 15px;
   font-size: 13px;
   text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background: #5F5F5F;
+  border: 2px solid #5F5F5F;
+  color: #ffffff;
+  -webkit-transition: ease-in-out 200ms;
+  -o-transition: ease-in-out 200ms;
+  transition: ease-in-out 200ms;
+  box-shadow: 3px 3px 6px rgba(26, 26, 26, 0.295);
 }
 
 .button > span.icon {
   font-family: "Font Awesome";
   display: inline;
   margin-left: 5px;
-  font-size: 1.3em;
+  font-size: 1.5em;
+}
+
+.button.-inverse-btn {
+  border: 2px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+}
+
+.button.-inverse-btn:hover {
+  border: 2px solid #ffffff;
+  background: #ffffff;
+  color: #252D64;
 }
 
 #hero {
+  position: relative;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   height: 100vh;
   min-height: 600px;
@@ -89,4 +129,13 @@ body {
   font-size: 2.2em;
   line-height: 1.2em;
   letter-spacing: 1px;
+}
+
+.scroll-pointer {
+  font-family: "Font Awesome";
+  position: absolute;
+  color: #ffffff;
+  bottom: 3%;
+  text-align: center;
+  width: 20px;
 }

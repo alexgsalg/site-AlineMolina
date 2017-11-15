@@ -3,6 +3,7 @@ $colorblue:#517FA4;
 $transDarkBlue: rgba(37, 45, 100, 0.76);
 $coloryellow:#F8D334;
 $colorwhite: #ffffff;
+$colordark: #5F5F5F;
 $opensans: 'Open Sans', 'Arial', sans-serif;
 $opensansbold: 'Open Sans Bold', 'Arial', sans-serif;
 $fontawesome: 'Font Awesome';
@@ -11,6 +12,19 @@ $fontawesome: 'Font Awesome';
     -o-transition: ease-in-out $transitionTime;
     transition: ease-in-out $transitionTime;
 }
+@mixin flex-align($hor-align, $ver-align){
+    -webkit-box-pack: $ver-align;
+    -ms-flex-pack: $ver-align;
+    justify-content: $ver-align;
+    -webkit-box-align: $hor-align;
+    -ms-flex-align: $hor-align;
+    align-items: $hor-align;
+}
+@mixin flex-wrap($wrap){
+    -ms-flex-wrap: $wrap;
+    flex-wrap: $wrap;
+}
+
 
 @import "../css/fonts.css";
 
@@ -25,8 +39,10 @@ body {
 .navbar {
     position: fixed;
     width: 100%;
+    z-index: 100;
 }
 .nav-container {
+    max-width: 1300px;
     margin: 0 auto;
     padding: 15px 2%;
 }
@@ -42,6 +58,8 @@ body {
 }
 
 .nav-menu {
+    font-family: $opensans;
+    font-weight: lighter;
     float: right;
     list-style: none;
     margin-top: 10px;
@@ -50,6 +68,7 @@ body {
 
 .nav-link {
     display: inline-block;
+    font-size:0.9em;
     padding: 12px 12px;
     text-decoration: none;
     color: $colorwhite;
@@ -63,32 +82,54 @@ body {
 // BUTTON
 .button{
     font-family: $opensansbold;
+    display: inline-block;
     width: 220px;
     margin: 30px 10px 5px 10px;
-    border: 1px solid $coloryellow;
+    border: 2px solid $coloryellow;
     background: $coloryellow;
     color: $colorDarkBlue;
     padding: 15px;
     font-size: 13px;
     text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius:5px;
 }
 .button:hover {
-
+    background: $colordark;
+    border: 2px solid $colordark;
+    color: $colorwhite;
+    @include transition-all(200ms);
+    box-shadow: 3px 3px 6px rgba(26, 26, 26, 0.295);
 }
 .button > span.icon {
     font-family: $fontawesome;
     display: inline;
     margin-left:5px;
-    font-size: 1.3em;
+    font-size: 1.5em;
+}
+
+.button.-inverse-btn {
+    border: 2px solid $colorwhite;
+    background: transparent;
+    color: $colorwhite
+}
+.button.-inverse-btn:hover {
+    border: 2px solid $colorwhite;
+    background: $colorwhite;
+    color: $colorDarkBlue;
 }
 
 // HERO
 #hero {
+    position: relative;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+    @include flex-wrap(nowrap);
+    @include flex-align(center, center);
     height: 100vh;
     min-height: 600px;
     text-align: center;
@@ -96,7 +137,6 @@ body {
     background-size: cover;
     background-position: 50% 50%;
     background-attachment: fixed;
-    // background: $transDarkBlue;
 }
 
 .microcopy {
@@ -110,3 +150,11 @@ body {
     letter-spacing: 1px;
 }
 
+.scroll-pointer {
+    font-family: $fontawesome;
+    position: absolute;
+    color: $colorwhite;
+    bottom: 3%;
+    text-align: center;
+    width: 20px;
+}
