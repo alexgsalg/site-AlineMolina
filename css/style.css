@@ -1,1 +1,92 @@
-body{position:relative;font-family:'Open-Sans', sans-serif;font-size:17px}.navbar{position:fixed;width:100%}.nav-container{margin:0 auto;padding:15px 2%}.nav-container::after,::before{content:'';display:block;clear:both}.brand{float:left;width:300px}.nav-menu{float:right;list-style:none;margin-top:10px}.nav-link{display:inline-block;padding:12px 12px;text-decoration:none;color:#fff;transition:ease-in-out 200ms}.nav-link:hover{color:#F8D334}#hero{display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:center;align-items:center;height:100vh;min-height:600px;text-align:center;background:linear-gradient(rgba(37,45,100,0.76), rgba(37,45,100,0.76)),url("../img/bg-hero.jpg"),no-repeat;background-size:cover;background-position:50% 50%;background-attachment:fixed}.microcopy{color:#fff}
+@import url(../css/fonts.css);
+body {
+  position: relative;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 17px;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+}
+
+.nav-container {
+  margin: 0 auto;
+  padding: 15px 2%;
+}
+
+.nav-container::after, ::before {
+  content: '';
+  display: inline;
+  clear: both;
+}
+
+.brand {
+  float: left;
+  width: 300px;
+}
+
+.nav-menu {
+  float: right;
+  list-style: none;
+  margin-top: 10px;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 12px 12px;
+  text-decoration: none;
+  color: #ffffff;
+  -webkit-transition: ease-in-out 200ms;
+  -o-transition: ease-in-out 200ms;
+  transition: ease-in-out 200ms;
+}
+
+.nav-link:hover {
+  color: #F8D334;
+}
+
+.button {
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  width: 220px;
+  margin: 30px 10px 5px 10px;
+  border: 1px solid #F8D334;
+  background: #F8D334;
+  color: #252D64;
+  padding: 15px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.button > span.icon {
+  font-family: "Font Awesome";
+  display: inline;
+  margin-left: 5px;
+  font-size: 1.3em;
+}
+
+#hero {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 600px;
+  text-align: center;
+  background: linear-gradient(rgba(37, 45, 100, 0.76), rgba(37, 45, 100, 0.76)), url("../img/bg-hero.jpg"), no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+}
+
+.microcopy {
+  color: #ffffff;
+  width: 850px;
+}
+
+.microcopy > h1.title {
+  font-size: 2.2em;
+  line-height: 1.2em;
+  letter-spacing: 1px;
+}

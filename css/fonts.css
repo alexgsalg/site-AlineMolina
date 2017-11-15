@@ -1,0 +1,32 @@
+/* FONTS */
+@font-face {
+    font-family: "Open Sans";
+    src: url(../fonts/OpenSans-Regular.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Open Sans Light";
+    src: url(../fonts/OpenSans-Light.ttf);
+    font-style: italic;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Open Sans Bold";
+    src: url(../fonts/OpenSans-Bold.ttf);
+    font-style: normal;
+    font-weight: bolder;
+}
+@font-face {
+    font-family: "Eurostile";
+    src: url(../fonts/eurosti.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face{ 
+	font-family: 'Font Awesome';
+	src: url('../fonts/fontawesome-webfont.ttf') format('truetype');
+	src: url('../fonts/fontawesome-webfont.woff') format('woff'),
+	     url('../fonts/FontAwesome.otf') format('opentype');
+}
